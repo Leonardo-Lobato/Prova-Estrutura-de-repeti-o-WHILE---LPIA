@@ -1,0 +1,19 @@
+secret_number = 7
+attempts = 0
+max_attempts = 3
+
+print("Bem-vindo ao jogo de adivinhação!")
+print(f"Você tem {max_attempts} tentativas para adivinhar o número secreto.")
+
+while attempts < max_attempts:
+    guess = int(input("Digite o seu palpite: "))
+    attempts += 1
+
+    if guess == secret_number:
+        print("Parabéns! Você acertou o número!")
+        break
+    else:
+        print("Tente novamente!")
+else:
+    print("Que pena! Você usou todas as suas tentativas.")
+    print(f"O número secreto era {secret_number}.")
